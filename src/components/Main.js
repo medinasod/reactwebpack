@@ -6,12 +6,12 @@ require('../styles/App.css');
 
 
 const PRODUCTS = [
-  { category: 'Sporting Goods', price: '$49.99', female: true, name: 'Lisa' },
-  { category: 'Sporting Goods', price: '$9.99', female: true, name: 'Samantha' },
-  { category: 'Sporting Goods', price: '$29.99', female: false, name: 'James' },
-  { category: 'Electronics', price: '$99.99', female: true, name: 'Jennifer' },
-  { category: 'Electronics', price: '$399.99', female: false, name: 'Fredrick' },
-  { category: 'Electronics', price: '$199.99', female: true, name: 'Amanda' },
+  { price: '$49.99', female: true, name: 'Lisa' },
+  { price: '$9.99', female: true, name: 'Samantha' },
+  { price: '$29.99', female: false, name: 'James' },
+  { price: '$99.99', female: true, name: 'Jennifer' },
+  { price: '$399.99', female: false, name: 'Fredrick' },
+  { price: '$199.99', female: true, name: 'Amanda' },
 ];
 
 class AppComponent extends React.Component {

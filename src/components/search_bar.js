@@ -9,7 +9,7 @@ class SearchBar extends Component {
   handleChange() {
     this.props.onUserInput(
       this.filterTextInput.value,
-      this.inStockOnlyInput.checked
+      this.isFemaleOnlyInput.checked,
     );
   }
 
@@ -23,16 +23,16 @@ class SearchBar extends Component {
           ref={(input) => { this.filterTextInput = input; }}
           onChange={this.handleChange}
         />
-        <p>
+        <section>
           <input
             type="checkbox"
-            checked={this.props.inStockOnly}
-            ref={(input) => { this.inStockOnlyInput = input; }}
+            checked={this.props.isFemaleOnly}
+            ref={(input) => { this.isFemaleOnlyInput = input; }}
             onChange={this.handleChange}
           />
           {' '}
           Only show female names.
-        </p>
+        </section>
       </form>
     );
   }
