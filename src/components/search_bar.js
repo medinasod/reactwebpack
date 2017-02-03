@@ -18,20 +18,20 @@ class SearchBar extends Component {
       <form>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Filter Names"
           value={this.props.filterText}
-          ref={(input) => this.filterTextInput = input}
+          ref={(input) => { this.filterTextInput = input; }}
           onChange={this.handleChange}
         />
         <p>
           <input
             type="checkbox"
             checked={this.props.inStockOnly}
-            ref={(input) => this.inStockOnlyInput = input}
+            ref={(input) => { this.inStockOnlyInput = input; }}
             onChange={this.handleChange}
           />
           {' '}
-          Only show products in stock
+          Only show female names.
         </p>
       </form>
     );

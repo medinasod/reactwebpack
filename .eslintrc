@@ -1,5 +1,5 @@
 {
-  "extends": "rallycoding" 
+  "extends": "rallycoding",
   "parser": "babel-eslint",
   "plugins": [
     "react"

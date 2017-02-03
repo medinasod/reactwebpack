@@ -7,7 +7,7 @@ class FilterableProductTable extends Component {
     super(props);
     this.state = {
       filterText: '',
-      inStockOnly: false
+      inStockOnly: false,
     };
 
     this.handleUserInput = this.handleUserInput.bind(this);
@@ -15,8 +15,8 @@ class FilterableProductTable extends Component {
 
   handleUserInput(filterText, inStockOnly) {
     this.setState({
-      filterText: filterText,
-      inStockOnly: inStockOnly
+      filterText,
+      inStockOnly,
     });
   }
 

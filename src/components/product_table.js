@@ -8,7 +8,7 @@ class ProductTable extends Component {
     let lastCategory = null;
     this.props.products.forEach((product) => {
       if (product.name.indexOf(this.props.filterText) === -1 ||
-      (!product.stocked && this.props.inStockOnly)) {
+      (!product.female && this.props.inStockOnly)) {
         return;
       }
       if (product.category !== lastCategory) {
