@@ -10,7 +10,11 @@ class ProductTable extends Component {
       (!product.female && this.props.isFemaleOnly)) {
         return;
       }
-      rows.push(<ProductRow product={product} key={product.name} />);
+      rows.push(<ProductRow
+        product={product}
+        key={product.name}
+        changedLastName={this.props.changedLastName}
+      />);
     });
     return (
       <table>

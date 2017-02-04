@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SearchBar from './search_bar';
 import ProductTable from './product_table';
 import LastNameInput from './last_name_input';
-import DisplayContainer from './display_container';
 
 class FilterableProductTable extends Component {
   constructor(props) {
@@ -29,7 +28,6 @@ class FilterableProductTable extends Component {
       changedLastName,
     });
   }
-
   render() {
     return (
       <div>
@@ -46,10 +44,7 @@ class FilterableProductTable extends Component {
           products={this.props.products}
           filterText={this.state.filterText}
           isFemaleOnly={this.state.isFemaleOnly}
-        />
-        <DisplayContainer
           changedLastName={this.state.changedLastName}
-          onUserInput={this.handleLastName}
         />
       </div>
     );
