@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductRow from './product_row';
 
 class ProductTable extends Component {
+
   render() {
     const rows = [];
     this.props.products.forEach((product) => {

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './search_bar';
 import ProductTable from './product_table';
-import LastNameInput from './last_name_input';
-import DisplayContainer from './display_container';
 
 class FilterableProductTable extends Component {
   constructor(props) {
@@ -14,7 +12,6 @@ class FilterableProductTable extends Component {
     };
 
     this.handleUserInput = this.handleUserInput.bind(this);
-    this.handleLastName = this.handleLastName.bind(this);
   }
 
   handleUserInput(filterText, isFemaleOnly) {
@@ -24,19 +21,9 @@ class FilterableProductTable extends Component {
     });
   }
 
-  handleLastName(changedLastName) {
-    this.setState({
-      changedLastName,
-    });
-  }
-
   render() {
     return (
       <div>
-        <LastNameInput
-          changedLastName={this.state.changedLastName}
-          onUserInput={this.handleLastName}
-        />
         <SearchBar
           filterText={this.state.filterText}
           isFemaleOnly={this.state.isFemaleOnly}
@@ -46,9 +33,6 @@ class FilterableProductTable extends Component {
           products={this.props.products}
           filterText={this.state.filterText}
           isFemaleOnly={this.state.isFemaleOnly}
-        />
-        <DisplayContainer
-          changedLastName={this.state.changedLastName}
         />
       </div>
     );
