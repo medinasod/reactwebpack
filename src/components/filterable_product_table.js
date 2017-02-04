@@ -14,13 +14,18 @@ class FilterableProductTable extends Component {
     };
 
     this.handleUserInput = this.handleUserInput.bind(this);
-    this.updateLastName = this.updateLastName.bind(this);
+    this.handleLastName = this.handleLastName.bind(this);
   }
 
-  handleUserInput(filterText, isFemaleOnly, changedLastName) {
+  handleUserInput(filterText, isFemaleOnly) {
     this.setState({
       filterText,
       isFemaleOnly,
+    });
+  }
+
+  handleLastName(changedLastName) {
+    this.setState({
       changedLastName,
     });
   }
@@ -30,7 +35,7 @@ class FilterableProductTable extends Component {
       <div>
         <LastNameInput
           changedLastName={this.state.changedLastName}
-          onUserInput={this.updateLastName}
+          onUserInput={this.handleLastName}
         />
         <SearchBar
           filterText={this.state.filterText}
