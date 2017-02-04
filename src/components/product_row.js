@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
-import LastNameInput from './last_name_input';
 
 class ProductRow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      changedLastName: '',
-    };
-
-    this.handleLastName = this.handleLastName.bind(this);
-  }
-
-  handleLastName(changedLastName) {
-    this.setState({
-      changedLastName,
-    });
-  }
 
   render() {
     const name =
@@ -25,12 +10,6 @@ class ProductRow extends Component {
     return (
       <tr>
         <td>{name}</td>
-        <td>
-          <LastNameInput
-            changedLastName={this.state.changedLastName}
-            onUserInput={this.handleLastName}
-          />
-        </td>
       </tr>
     );
   }
