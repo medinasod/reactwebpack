@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DisplayContainer from './display_container';
 import LastNameInput from './last_name_input';
 
 class ProductRow extends Component {
@@ -30,9 +29,6 @@ class ProductRow extends Component {
           <LastNameInput
             changedLastName={this.state.changedLastName}
             onUserInput={this.handleLastName}
-          />
-          <DisplayContainer
-            changedLastName={this.state.changedLastName}
           />
         </td>
       </tr>
