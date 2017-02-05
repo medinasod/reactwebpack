@@ -1,8 +1,11 @@
 /* Base Application Styles */
-table, form { padding: 10px; }
-td, section { padding: 3px 5px 5px 0; border-bottom: 1px solid silver; }
-input { margin-top: 5px; }
-body {
-  color: #666;
-  background: #FFF;
-}
+body {color: #666;background: #FFF;font-family: 'Roboto Slab', serif;}
+table, form { padding: 10px; margin-left: 10px;border-collapse:collapse; }
+table {margin:10px 10px 10px 20px;}
+th {padding: 10px 10px 10px 0;}
+td, section { padding: 3px 5px 5px 0; border-bottom: 1px solid #EEE; }
+input { font-size: 14px;margin-top: 5px; padding:3px; }
+.lastNameInput { margin-bottom: -5px;}
+.checkboxes { font-size: 13px; }
+.checkbox { margin-left: 0px;margin-right:2px }
+.checkbox:nth-child(2) {margin-left: 10px;}

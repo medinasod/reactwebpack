@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import SearchBar from './search_bar';
-import ProductTable from './product_table';
+import NameTable from './name_table';
 import LastNameInput from './last_name_input';
 
-class FilterableProductTable extends Component {
+class FilterableNameTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
       filterText: '',
-      isFemaleOnly: false,
+      isFemaleOnly: true,
+      isMaleOnly: true,
       changedLastName: '',
     };
 
@@ -16,13 +17,13 @@ class FilterableProductTable extends Component {
     this.handleLastName = this.handleLastName.bind(this);
   }
 
-  handleUserInput(filterText, isFemaleOnly) {
+  handleUserInput(filterText, isFemaleOnly, isMaleOnly) {
     this.setState({
       filterText,
       isFemaleOnly,
+      isMaleOnly,
     });
   }
-
   handleLastName(changedLastName) {
     this.setState({
       changedLastName,
@@ -38,12 +39,14 @@ class FilterableProductTable extends Component {
         <SearchBar
           filterText={this.state.filterText}
           isFemaleOnly={this.state.isFemaleOnly}
+          isMaleOnly={this.state.isMaleOnly}
           onUserInput={this.handleUserInput}
         />
-        <ProductTable
+        <NameTable
           products={this.props.products}
           filterText={this.state.filterText}
           isFemaleOnly={this.state.isFemaleOnly}
+          isMaleOnly={this.state.isMaleOnly}
           changedLastName={this.state.changedLastName}
         />
       </div>
@@ -51,4 +54,4 @@ class FilterableProductTable extends Component {
   }
 }
 
-export default FilterableProductTable;
+export default FilterableNameTable;

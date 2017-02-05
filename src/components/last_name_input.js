@@ -14,7 +14,7 @@ class LastNameInput extends Component {
 
   render() {
     return (
-      <form>
+      <form className="lastNameInput">
         <input
           type="text"
           placeholder="Last Name"

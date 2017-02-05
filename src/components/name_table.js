@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import ProductRow from './product_row';
+import NameRow from './name_row';
 
-class ProductTable extends Component {
+class NameTable extends Component {
 
   render() {
     const rows = [];
     this.props.products.forEach((product) => {
       if (product.name.indexOf(this.props.filterText) === -1 ||
-      (!product.female && this.props.isFemaleOnly)) {
+      (product.female && !this.props.isFemaleOnly)) { // Not female.
         return;
       }
-      rows.push(<ProductRow
+      if (product.name.indexOf(this.props.filterText) === -1 ||
+      (product.male && !this.props.isMaleOnly)) { // Not male.
+        return;
+      }
+      rows.push(<NameRow
         product={product}
         key={product.name}
         changedLastName={this.props.changedLastName}
@@ -30,4 +34,4 @@ class ProductTable extends Component {
   }
 }
 
-export default ProductTable;
+export default NameTable;
